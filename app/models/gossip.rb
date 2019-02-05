@@ -4,6 +4,6 @@ class Gossip < ApplicationRecord
 	has_many :tags, through: :join_table_tag_gossips
 
   validates :content, presence: true
-  validates :title, presence: true
+  validates :title, presence: true, length: { in: 3..14}
 
 end

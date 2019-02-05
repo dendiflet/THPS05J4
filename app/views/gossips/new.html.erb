@@ -1,0 +1,27 @@
+    
+<%= form_tag url_for(action: "create"), method: "post" do %>
+
+<input name="utf8" type="hidden" value="&#x2713;" />
+<input name="authenticity_token" type="hidden" value="J7CBxfHalt49OSHp27hblqK20c9PgwJ108nDHX/8Cts=" />
+
+<p>
+<%= label_tag 'titre du gossip' %>
+<%= text_field(:gossip, :title) %>
+</p>
+
+<p>
+<%= label_tag 'content du gossip' %>
+<%= text_field(:gossip, :content) %>
+</p>
+
+<p>
+<%= label_tag 'user_id (met entre 1 et 10 stp)' %>
+<%= text_field(:gossip, :user_id) %>
+</p>
+
+
+<p>
+<%= submit_tag "Create Gossip" %>
+</p>
+
+<% end %>
