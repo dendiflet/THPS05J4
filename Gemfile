@@ -3,6 +3,18 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+############### gem ajoutée par nos soins #############
+gem 'execjs'
+gem 'therubyracer'   #sur mon mac sinon ca fail
+gem 'table_print'
+gem 'faker'
+
+
+
+
+########################################################@
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use postgresql as the database for Active Record
@@ -38,6 +50,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+
+################ gem ajoutée par nos soins #############
+  gem 'rspec-rails', '~> 3.8'
+########################################################
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -56,6 +72,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'rspec-rails', '~> 3.8'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
