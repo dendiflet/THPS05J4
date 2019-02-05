@@ -16,13 +16,17 @@ RSpec.describe Tag, type: :model do
     end
 
     describe "#title" do
-      bad_tag = Tag.create
-      expect(bad_tag).not_to be_valid
+      it "shoul not be valid without attributes" do 
+        bad_tag = Tag.create
+        expect(bad_tag).not_to be_valid
+      end
     end
 
     describe "#title_length" do
-      bad_tag = Tag.create(title: "fj")
-      expect(bad_tag).not_to be_valid
+      it "should not be valid with a short #title" do
+        bad_tag = Tag.create(title: "fj")
+        expect(bad_tag).not_to be_valid
+      end
     end
 
 

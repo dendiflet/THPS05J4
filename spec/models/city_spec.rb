@@ -15,23 +15,25 @@ RSpec.describe City, type: :model do
     end
 
     describe "#name" do
-      bad_city =City.create(zip_code: "1233445")
-      expect(bad_city).not_to be_valid  
+      it "should not be valid without a #name" do
+        bad_city =City.create(zip_code: "1233445")
+        expect(bad_city).not_to be_valid  
+      end
     end
 
     describe "#zip_code" do
-      bad_city =City.create(name: "nom_de_la_ville")
-      expect(bad_city).not_to be_valid  
+      it "sould not be valid without a #zip_code" do
+        bad_city =City.create(name: "nom_de_la_ville")
+        expect(bad_city).not_to be_valid  
+      end
     end
 
     describe "taille #zip_code" do
-      bad_city =City.create(name: "nom_de_la_ville", zip_code: "145")
-      expect(bad_city).not_to be_valid  
-    end    
-
+      it "sould not be valid with a short #zip_code" do
+        bad_city =City.create(name: "nom_de_la_ville", zip_code: "145")
+        expect(bad_city).not_to be_valid  
+      end
+    end 
 
   end
-
- 
-
 end

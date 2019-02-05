@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Gossip, type: :model do
 	
 	before(:each) do
-		@gossip = Gossip.create(title: "titre du gossip", content: "contenu")
+		@gossip = Gossip.create(title: "titre du gossip", content: "contenu", user_id: "1")
 	end
 
 	context "validation" do 
