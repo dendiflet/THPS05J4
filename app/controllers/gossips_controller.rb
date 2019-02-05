@@ -17,7 +17,7 @@ class GossipsController < ApplicationController
     puts "$" * 20 + "  affichage du gossip"		
 		puts @new_one
     puts "$" * 60  	
-
+ redirect_to root_url
   end
 
 

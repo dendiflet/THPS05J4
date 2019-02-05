@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe Gossip, type: :model do
 	
 	before(:each) do
-		@gossip = Gossip.create(title: "titre du gossip", content: "contenu", user_id: "1")
+ @user = User.create(first_name: "beber", last_name: "atroispoilaucul", email: "beber_du_95@yopmail.com", city_id: "1")
+ 		@gossip = Gossip.create(title: "titregossip", content: "contenu", user: @user)
 	end
 
 	context "validation" do 
