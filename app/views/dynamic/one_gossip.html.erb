@@ -1,5 +1,9 @@
 <h1> Titre : <%= @one_gossip.title %> </h1>
 
-<h4> Contenue :</h4>
+<h4> Contenu :</h4>
 <p> <%= @one_gossip.content %></p>
+<h4> Author :</h4>
+<p> <%= @one_gossip.user.first_name %></p>
+<h4> city :</h4>
+<p> <%= @one_gossip.user.city.name %></p>
 <a href = "user/<%=@user.id %>" class="btn btn-primary">voir l'auteur du potin'</a>
