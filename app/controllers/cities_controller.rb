@@ -1,7 +1,9 @@
 class CitiesController < ApplicationController
 
+
 	def show
 
+@potin_by_city = Array.new
 
 		puts "#" * 60
 		puts "je suis dans show"
@@ -19,10 +21,10 @@ class CitiesController < ApplicationController
 		puts "#" * 60
     @user_by_city.each do |user|
     	puts user.id
-		  @potin_by_city = Gossip.where(user_id: user.id)	
+		  @potin_by_city << Gossip.where(user_id: user.id)	
+		  puts @potin_by_city
 		puts "#" * 60
 	  end
-		  puts @potin_by_city
 
 
 

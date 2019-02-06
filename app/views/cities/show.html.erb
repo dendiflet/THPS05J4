@@ -1,5 +1,9 @@
 <h1>Nom : <%= @city.name%></h1>
 
-<% @potin_by_city.each do |potin| %>
+<% @potin_by_city.each do |user| %>
+<% user.each do |potin| %>
+
 <p><%= potin.content %></p>
+<% end %>
+
 <% end %>
