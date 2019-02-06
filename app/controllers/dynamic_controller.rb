@@ -8,11 +8,7 @@ class DynamicController < ApplicationController
     @gossip = Gossip.all
 	end
 	
-  def one_gossip
-    @one_gossip = Gossip.find_by(id: params[:i])
-        @user = User.find_by(id: @one_gossip.user)
 
-  end
 
   def user 
     @one_gossip = Gossip.find_by(id: params[:i])

@@ -8,6 +8,7 @@ class GossipsController < ApplicationController
 
   def create
     puts "$" * 60
+    puts "on est dans gossip controller create"
     puts "ceci est le contenu de params :"
     puts params
     #byebug
@@ -26,11 +27,19 @@ class GossipsController < ApplicationController
     puts "########   ERREUR   ###############"
     redirect_to new_gossip_url
   end
+  end
 
+  def show
+
+    puts "@"*60
+    puts "je suis dans home du gossipshowController"
+    puts "@"*60
+    @one_gossip = Gossip.find_by(id: params[:id])
+    @user = User.find_by(id: @one_gossip.user)
+    @city = City.find_by(id: @city_id)
 
 
   end
-
 
 end
 

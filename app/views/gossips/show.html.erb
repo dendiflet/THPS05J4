@@ -7,4 +7,4 @@
 <h4> city :</h4>
 <p> <%= @one_gossip.user.city.name %></p>
 <a href = "user/<%=@user.id %>" class="btn btn-primary">plus sur l'auteur</a>
-<a href = "city/<%=@city.id %>" class="btn btn-primary">les ragots de la ville</a>
+<a class="btn btn-primary"> <%= link_to "city", city_path(@user.city_id) %> <a/>
