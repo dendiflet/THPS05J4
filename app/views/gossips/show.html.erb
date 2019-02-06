@@ -9,3 +9,6 @@
 
 <a href = "user/<%=@user.id %>" class="btn btn-primary">plus sur l'auteur</a>
 <p class="btn btn-primary"> <%= link_to "city", city_path(@user.city_id) %> <p/>
+<p class="btn btn-primary"> <%= link_to "edit", edit_gossip_path(@one_gossip.id) %> <p/>
+	
+<p class="btn btn-primary"> <%= link_to "disparait", gossip_path(@one_gossip.id), method: :delete, data: { confirm: 'Are you sure?' }%> <p/>

@@ -8,3 +8,5 @@
 <p> <%= @one_gossip.user.city.name %></p>
 <a href = "user/<%=@user.id %>" class="btn btn-primary">plus sur l'auteur</a>
 <a href = "city/<%=@city.id %>" class="btn btn-primary">les ragots de la ville</a>
+
+<p class="btn btn-primary"> <%= link_to "disparait", data-method="DELETE",  gossip_path(@one_gossip.id) %> <p/>
