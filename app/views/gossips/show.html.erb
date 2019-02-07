@@ -2,13 +2,14 @@
 
 <h4> Contenu :</h4>
 <p> <%= @one_gossip.content %></p>
-<h4> Author :</h4>
+<h4> Auteur :</h4>
 <p> <%= @one_gossip.user.first_name %></p>
-<h4> city :</h4>
+<h4> Ville :</h4>
 <p> <%= @one_gossip.user.city.name %></p>
 
-<a href = "user/<%=@user.id %>" class="btn btn-primary">plus sur l'auteur</a>
-<p class="btn btn-primary"> <%= link_to "city", city_path(@user.city_id) %> <p/>
-<p class="btn btn-primary"> <%= link_to "edit", edit_gossip_path(@one_gossip.id) %> <p/>
+
+<p class="btn btn-primary"> <%= link_to "Plus sur l'auteur", user_path(@user.id) %> </p>
+<p class="btn btn-primary"> <%= link_to "city", city_path(@user.city_id) %> </p>
+<p class="btn btn-primary"> <%= link_to "edit", edit_gossip_path(@one_gossip.id) %> </p>
 	
-<p class="btn btn-primary"> <%= link_to "disparait", gossip_path(@one_gossip.id), method: :delete, data: { confirm: 'Are you sure?' }%> <p/>
+<p class="btn btn-primary"> <%= link_to "disparait", gossip_path(@one_gossip.id), method: :delete, data: { confirm: 'Are you sure?' }%> </p>

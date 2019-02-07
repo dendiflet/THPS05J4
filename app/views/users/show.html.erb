@@ -3,11 +3,14 @@
 <h4> First name :</h4>
 <p> <%= @user.first_name %></p>
 <h4> Last name :</h4>
-<p> <%= @user.last_name %></p>
+<%= @user.last_name %>
+<h3>Age :</h3>
+<p> <%= @user.age %></p>
+<h3>Email :</h3>
+<p><%= @user.email %></p>
 <h4> Description :</h4>
 <p> <%= @user.description %></p>
 <h4> city :</h4>
-<p> <%= @user.city_id %></p>
+<p> <%= @user.city.name %></p>
 
-
-<a href="<%= users_path%>" class="btn btn-primary">Retour</a>
+<p class="btn btn-primary"> <%= link_to "city potins", city_path(@user.city_id) %> </p>
