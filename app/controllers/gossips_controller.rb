@@ -13,6 +13,7 @@ class GossipsController < ApplicationController
     puts params
     puts "$" * 60
     puts "création d'un nouveau gossip"
+    byebug
     @new_one = Gossip.new(title: params[:gossip][:title], content: params[:gossip][:content], user_id: params[:gossip][:user_id])
     
     if @new_one.save # essaie de sauvegarder en base @gossip
