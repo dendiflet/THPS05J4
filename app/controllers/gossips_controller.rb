@@ -12,23 +12,15 @@ class GossipsController < ApplicationController
   	puts "@"*60
     @gossip = Gossip.all
   end
-  
-  def create
-<<<<<<< HEAD
 
-=======
->>>>>>> master
+  def create
     puts "$" * 60
     puts "on est dans gossip controller create"
     puts "ceci est le contenu de params :"
     puts params
     puts "$" * 60
     puts "création d'un nouveau gossip"
-<<<<<<< HEAD
 
-=======
-    byebug
->>>>>>> master
     @new_one = Gossip.new(title: params[:gossip][:title], content: params[:gossip][:content], user_id: params[:gossip][:user_id])
 
     if @new_one.save
