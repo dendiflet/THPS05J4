@@ -20,17 +20,16 @@ class GossipsController < ApplicationController
     puts params
     puts "$" * 60
     puts "création d'un nouveau gossip"
-    byebug
     @new_one = Gossip.new(title: params[:gossip][:title], content: params[:gossip][:content], user_id: params[:gossip][:user_id])
 
     if @new_one.save
   		puts @new_one
-       redirect_to root_url
+       redirect_to root_path, success: "Vous avez créé un gossip !!!"
     else
       # sinon, il render la view new (qui est celle sur laquelle on est déjà)
       puts "$" * 60
       puts "########   ERREUR   ###############"
-      render new_gossip_url
+      render new_gossip_url, danger: "Remplissez correctement les différents champs"
     end
   end
 

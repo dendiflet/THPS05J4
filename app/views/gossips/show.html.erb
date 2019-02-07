@@ -1,10 +1,9 @@
-<h1> Titre : <%= @one_gossip.title %> </h1>
-
-<h4> Contenu :</h4>
-<p> <%= @one_gossip.content %></p>
+<h1> Titre: <%= @one_gossip.title %> </h1>
 <h4> Auteur :</h4>
 <p> <%= @one_gossip.user.first_name %></p>
-<h4> Ville :</h4>
+<h5> Contenu:</h5>
+<p> <%= @one_gossip.content %></p>
+<h5> Ville :</h5>
 <p> <%= @one_gossip.user.city.name %></p>
 
 
