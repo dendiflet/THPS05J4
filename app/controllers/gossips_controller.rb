@@ -12,7 +12,11 @@ class GossipsController < ApplicationController
   	puts "@"*60
     @gossip = Gossip.all
   end
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> master
   def create
     puts "$" * 60
     puts "on est dans gossip controller create"
@@ -25,12 +29,12 @@ class GossipsController < ApplicationController
 
     if @new_one.save
   		puts @new_one
-       redirect_to root_url
+       redirect_to root_path, success: "Vous avez créé un gossip !!!"
     else
       # sinon, il render la view new (qui est celle sur laquelle on est déjà)
       puts "$" * 60
       puts "########   ERREUR   ###############"
-      render new_gossip_url
+      render new_gossip_url, danger: "Remplissez correctement les différents champs"
     end
   end
 

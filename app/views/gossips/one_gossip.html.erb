@@ -1,12 +1,12 @@
-<h1> Titre : <%= @one_gossip.title %> </h1>
+<h2> Titre: <%= @one_gossip.title %> </h2>
 
-<h4> Contenu :</h4>
-<p> <%= @one_gossip.content %></p>
-<h4> Author :</h4>
+<h4> Author:</h4>
 <p> <%= @one_gossip.user.first_name %></p>
-<h4> city :</h4>
+<h4> Contenu: </h4>
+<p> <%= @one_gossip.content %></p>
+<h4> city: </h4>
 <p> <%= @one_gossip.user.city.name %></p>
-<a href = "user/<%=@user.id %>" class="btn btn-primary">plus sur l'auteur</a>
-<a href = "city/<%=@city.id %>" class="btn btn-primary">les ragots de la ville</a>
+<a href = " %>" class="btn btn-primary">plus sur l'auteur</a>
+<a href = "city/<%=@city.id %>" class="btn btn-primary">Les ragots de la ville</a>
 
-<p class="btn btn-primary"> <%= link_to "disparait", data-method="DELETE",  gossip_path(@one_gossip.id) %> <p/>
+<p class="btn btn-primary"> <%= link_to "Supprimer", data-method="DELETE",  gossip_path(@one_gossip.id) %> </p>
