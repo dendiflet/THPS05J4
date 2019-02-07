@@ -54,7 +54,7 @@ puts "ici la création d'un user"
       puts "please your password"
       render :new
 
-    elsif @user.save
+    elsif @user.save!
       puts "user created succes"
       puts "#"*60
       redirect_to sessions_path(@user.id)
