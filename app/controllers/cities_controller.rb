@@ -7,11 +7,13 @@ class CitiesController < ApplicationController
 
 		puts "#" * 60
 		puts "je suis dans show"
+
 		@city = City.find_by(id: params[:id])
 		puts params
 		puts @city.id
 		puts @city.name
 		puts "#" * 60
+
 		puts "ici les users"
 		@user_by_city = User.where(city_id: @city.id)
 #		puts "#" * 60
@@ -25,6 +27,6 @@ class CitiesController < ApplicationController
 		  puts @potin_by_city
 		puts "#" * 60
 	  end
-	@city = City.
+	  byebug
 	end
 end

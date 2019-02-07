@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  get 'sessions/create'
-  get 'sessions/destroy'
 	root "gossips#home"
   get '/team', to: "static#team"
   get '/contact', to: "static#contact"
