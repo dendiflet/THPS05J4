@@ -10,12 +10,15 @@
 <label> Description</label>
   <%= f.text_area :description %>
 </p>
+<p>
 <label> Email</label>
-  <%= f.text_area :email %>
+  <%= f.email_field :email %>
 </p>
+<p>
 <label> Age</label>
-  <%= f.text_area :age %>
+  <%= f.number_field :age %>
 </p>
+<p>
 <label> City ID</label>
   <%= f.collection_select :city_id, City.all, :id, :name %>
 </p>

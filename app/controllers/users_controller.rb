@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
   def create
     user = User.create(post_params)
-    redirect_to user_path(user.id)
+    redirect_to "/"
   end
 
   def destroy
