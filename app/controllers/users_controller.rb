@@ -1,4 +1,3 @@
-#gossips_controller.rb
 class UsersController < ApplicationController
 
   def index
@@ -6,7 +5,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+      @one_gossip = Gossip.find_by(id: params[:i])
+      @user = User.find(params[:id])
+      # @user = User.find_by(id: @one_gossip.user)
   end
 
   def edit

@@ -1,0 +1,21 @@
+
+
+<div class="row">
+
+<% @gossip.each do |i| %>
+<div class="card col-sm-3 text-center">
+  <div class="card-header">
+    <p>potin n°<%= i.id %></p>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">auteur : <%= i.user.first_name %></h5>
+    <p class="card-text">titre : <%= i.title %></p>
+    <a href= "gossips/<%= i.id%>" class="btn btn-primary">En savoir plus</a>
+  </div>
+</div>
+<% end %>
+
+</div>
+
+
+

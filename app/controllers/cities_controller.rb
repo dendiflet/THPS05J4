@@ -25,11 +25,6 @@ class CitiesController < ApplicationController
 		  puts @potin_by_city
 		puts "#" * 60
 	  end
-
 	@city = City.
-
-
-
 	end
-
 end
