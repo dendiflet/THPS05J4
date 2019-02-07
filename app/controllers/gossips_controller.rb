@@ -29,7 +29,7 @@ class GossipsController < ApplicationController
       # sinon, il render la view new (qui est celle sur laquelle on est déjà)
       puts "$" * 60
       puts "########   ERREUR   ###############"
-      render new_gossip_url, danger: "Remplissez correctement les différents champs"
+      render :new , danger: "Remplissez correctement les différents champs"
     end
   end
 
