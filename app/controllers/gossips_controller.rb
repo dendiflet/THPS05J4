@@ -24,7 +24,7 @@ class GossipsController < ApplicationController
       # sinon, il render la view new (qui est celle sur laquelle on est déjà)
       puts "$" * 60  	
       puts "########   ERREUR   ###############"
-      redirect_to new_gossip_url
+      render new_gossip_url
     end
   end
 
@@ -44,6 +44,7 @@ def edit
     @gossip_to_edit = Gossip.find_by(id:  params[:id])
     puts "@"*60
 end
+
 def update
   
   @gossip_to_update = Gossip.find_by(id:  params[:id])
