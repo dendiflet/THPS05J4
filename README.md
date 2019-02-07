@@ -26,7 +26,7 @@ si tu veux un msg de bienvenue (comme inddiqué par les consignes ->)
 
 - Iannis
 - Guillaume
-
+- Maxime
 - Qentin 
 
 
