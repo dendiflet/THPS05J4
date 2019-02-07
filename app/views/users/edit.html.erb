@@ -1,0 +1,27 @@
+<h1> editer un user </h1>
+
+
+<%= form_for @user do |f| %>
+<label> prénom user</label>
+  <%= f.text_field :first_name %>
+  <p>
+<label>Nom user</label>
+  <%= f.text_field :last_name %>
+  <p>
+<label>Description</label>
+  <%= f.text_area :description %>
+</p>
+<label>Email</label>
+  <%= f.text_area :email %>
+</p>
+<label>Age</label>
+  <%= f.text_area :age %>
+</p>
+<label>City ID</label>
+  <%= f.text_area :city_id %>
+</p>
+<div class="form-group">
+  <button type="submit" class="btn btn-primary">Modifier</button>
+</div>
+
+<% end %>

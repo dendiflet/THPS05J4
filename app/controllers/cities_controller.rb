@@ -11,8 +11,8 @@ class CitiesController < ApplicationController
 		puts params
 		puts @city.id
 		puts @city.name
-		puts "#" * 60	
-		puts "ici les users"	
+		puts "#" * 60
+		puts "ici les users"
 		@user_by_city = User.where(city_id: @city.id)
 #		puts "#" * 60
 		puts @user_by_city
@@ -21,11 +21,12 @@ class CitiesController < ApplicationController
 		puts "#" * 60
     @user_by_city.each do |user|
     	puts user.id
-		  @potin_by_city << Gossip.where(user_id: user.id)	
+		  @potin_by_city << Gossip.where(user_id: user.id)
 		  puts @potin_by_city
 		puts "#" * 60
 	  end
 
+	@city = City.
 
 
 
