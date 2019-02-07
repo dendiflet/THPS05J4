@@ -1,0 +1,18 @@
+<h1>users</h1>
+
+<% @users.each do |user| %>
+
+  <h2> <%= user.first_name %> </h2>
+  <p> <%= user.last_name %> </p>
+
+  <p>
+    <a href="<%= user_path(user.id) %>" class="btn btn-primary">Lire la suite</a>
+    <a href="<%= edit_user_path(user.id)%>" class="btn btn-default">Editer</a>
+    <a href="<%= user_path(user.id)%>" class="btn btn-danger" data-confirm="Etes-vous sûr ?"  data-method="delete" rel="nofollow">Supprimer</a>
+  </p>
+
+<% end %>
+
+<p>
+  <a href="<%= new_user_path %>" class="btn btn-success">Créer User</a>
+</p>

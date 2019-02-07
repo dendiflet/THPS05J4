@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   get 'gossips/user/:i', to: 'dynamic#user'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :gossips, only: [:new, :create, :show, :edit, :update, :destroy] 
+  resources :gossips, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :cities, only: [:show]
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
+
 
 end
