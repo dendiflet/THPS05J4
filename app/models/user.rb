@@ -7,4 +7,6 @@ class User < ApplicationRecord
   validates :last_name, presence: true
 	validates :email, presence: true, uniqueness: true, format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
   has_secure_password	
+	has_many :likes
+
 end
