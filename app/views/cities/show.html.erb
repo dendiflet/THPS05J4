@@ -1,10 +1,21 @@
 <h1>Nom: <%= @city.name%></h1>
 
-<% @potin_by_city.each do |potin| %>
-    <p><%= potin.user.first_name %></p>
-    <p><%= potin.content %></p>
+<div class="row">
+
+<% @potin_by_city.each do |i| %>
+<div class="card col-sm-3 text-center">
+  <div class="card-header">
+    <p>Gossip n°<%= i.id %></p>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Auteur : <%= i.user.first_name %></h5>
+    <p class="card-text">Titre : <%= i.title %></p>
+    <p class="btn btn-primary"><%= link_to "En savoir plus", gossip_path%></p>
+    <a href="gossip/like/<%= i.id %>" class="btn btn-primary">Like</a>
+
+  </div>
+</div>
 <% end %>
 
-
-
+</div>
 
