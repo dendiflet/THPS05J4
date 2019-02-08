@@ -57,6 +57,7 @@ puts "ici la création d'un user"
     elsif @user.save!
       puts "user created succes"
       puts "#"*60
+      flash[:success] = "Compte créé !"
       redirect_to sessions_path(@user.id)
     else
       puts "please redo !"

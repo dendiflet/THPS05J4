@@ -23,13 +23,9 @@ class GossipsController < ApplicationController
     @new_one = Gossip.new(title: params[:gossip][:title], content: params[:gossip][:content], user_id: params[:gossip][:user_id])
 
     if @new_one.save
-  		puts @new_one
-       redirect_to root_path, success: "Vous avez créé un gossip !!!"
-    else
-      # sinon, il render la view new (qui est celle sur laquelle on est déjà)
-      puts "$" * 60
-      puts "########   ERREUR   ###############"
-      render :new , danger: "Remplissez correctement les différents champs"
+      puts @new_one
+      flash[:success] = "Ton gossip a bien été créé !"
+      redirect_to root_path
     end
   end
 
@@ -49,6 +45,7 @@ def update
     posted_params = params.require(:gossip).permit(:title, :content)
 
   if @gossip_to_update.update(posted_params)
+    flash[:success] = "Ton gossip a bien été modifié !"
     redirect_to gossip_path
   else
     render :edit
@@ -61,6 +58,7 @@ def destroy
     puts "attention ca va supprimer !"
     puts "@"*60
     @gossip_to_destroy.destroy
+    flash[:primary] = "Ton gossip a bien été supprimé."
     redirect_to root_path
 end
 
